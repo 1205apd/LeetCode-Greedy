@@ -1,0 +1,13 @@
+class Solution:
+    def minOperations(self, nums: List[int]) -> int:
+        last=0
+        delta=0
+        for x in nums:
+            if last>=x:
+                delta+=last-x+1
+                last+=1
+            else:
+                last=x
+        return delta
+            
+        
